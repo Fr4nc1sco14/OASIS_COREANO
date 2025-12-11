@@ -1,0 +1,235 @@
+/* Reset / fonts base */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Grid for product list */
+.product-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  align-items: start;
+  padding-top: 18px;
+}
+
+/* --- Product card --- */
+.product-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(17, 17, 17, 0.06);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  display: flex;
+  flex-direction: column;
+
+  /* Mantém todas as cards com mesma altura */
+  height: 500px;
+
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+.product-card:focus-within,
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(17, 17, 17, 0.08);
+}
+
+/* Forçar altura fixa da imagem */
+.product-media {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: #f6f6f6;
+
+  flex: 0 0 260px;
+  margin: 0 auto;
+}
+.product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.btn-wish {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(17, 17, 17, 0.06);
+}
+.btn-wish:focus {
+  outline: 3px solid rgba(17, 17, 17, 0.12);
+}
+
+.product-body {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* permite ao conteúdo expandir sem quebrar */
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.brand {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.rating {
+  font-size: 0.9rem;
+  color: #f59e0b;
+}
+
+/* --- Truncagem de título e descrição (mantém tudo alinhado) --- */
+:root {
+  --title-lines: 2;
+  --excerpt-lines: 3;
+  --title-line-height: 1.1;
+  --excerpt-line-height: 1.3;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  line-height: var(--title-line-height);
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  max-height: calc(var(--title-lines) * var(--title-line-height) * 1em);
+  text-overflow: ellipsis;
+}
+
+.excerpt {
+  margin: 0;
+  color: #666;
+  font-size: 0.92rem;
+  line-height: var(--excerpt-line-height);
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  max-height: calc(var(--excerpt-lines) * var(--excerpt-line-height) * 1em);
+}
+
+/* --- Footer sempre alinhado ao fundo --- */
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  margin-top: auto; /* empurra o footer para baixo */
+}
+
+.price-area {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+.price {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #111;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.btn {
+  border-radius: 999px;
+  border: 1px solid #111;
+  background: #fff;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn:focus {
+  outline: 3px solid rgba(17, 17, 17, 0.12);
+}
+.btn-add {
+  padding: 10px 12px;
+  min-width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  box-shadow: 0 8px 22px rgba(17, 17, 17, 0.06);
+}
+
+/* Utility: visually hidden */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .product-media {
+    height: 220px;
+    flex: 0 0 220px;
+  }
+}
+
+/* Placeholder para quando não há imagem */
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAL' NTURE — Catálogo</title>
+    <link rel="shortcut icon" type="imagex/png" href="../images/IMAGE3.jpg" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Main site stylesheet (kept external) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../pages/Catalog.css">
+  </head>
+
+  <body>
+    <!-- NAVBAR: (mantive a estrutura original mas removi scripts JS extra) -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-items container" id="main-navbar">
+        <div class="navbar-left" style="align-items:center; gap:12px;">
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+
+          <div class="navbar-items-logo" style="margin-left:6px;">
+            <a href="../../index.html" aria-label="FAL'NTURE - Página inicial">
+              <img src="../images/IMAGE3.jpg" alt="Logo FAL'NTURE" style="height:44px; width:auto; display:block;" />
+            </a>
+          </div>
+        </div>
+
+        <div class="navbar-center" aria-hidden="true" style="pointer-events:none;"></div>
+
+        <ul class="navbar-items-li" role="menubar">
+          <li class="navbar-item" id="active" role="none"><a role="menuitem" href="Catalog.html">CATÁLOGO</a></li>
+          <li class="navbar-item" role="none"><a role="menuitem" href="#">MAIS VENDIDOS</a></li>
+          <li class="navbar-item" role="none"><a role="menuitem" href="#">SOBRE NÓS</a></li>
+          <li class="navbar-item" role="none"><a role="menuitem" href="#">GUIA</a></li>
+        </ul>
+
+        <div class="navbar-right" style="align-items:center;">
+          <div class="navbar-items-icons">
+            <input type="search" name="Navbar-search" placeholder="Procurar ..." aria-label="Pesquisar" />
+            <button class="icon-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <button class="icon-btn" aria-label="Carrinho"><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main catalogue area -->
+    <main class="container">
+      <h1 style="margin: 18px 0 8px; font-size:5rem;text-align: center; margin-top: 50px;">CATÁLOGO</h1>
+      <p style="margin:0 0 18px;color:#666;text-align: center; width: 60%; margin: 0 auto; margin-bottom: 100px;">Bem-vindo ao nosso catálogo. Aqui encontras uma seleção de produtos pensados para cuidar da tua pele com qualidade e confiança. Explora cada item e descobre o que melhor se adapta à tua rotina.</p>
+
+      <!-- Aqui os cards serão injectados pelo JS -->
+      <section style="margin-bottom: 100px;" id="shopItems-list" class="product-grid" role="list" aria-label="Lista de produtos"></section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer-column-1">
+        <img src="../images/IMAGE3.jpg" alt="Footer Logo">
+      </div>
+      <div class="footer-column-2">
+        <li class="footer-item">CATÁLOGO</li>
+        <li class="footer-item">MAIS VENDIDOS</li>
+        <li class="footer-item">SOBRE NÓS</li>
+      </div>
+      <div class="footer-column-3">
+        <li class="footer-item-social">INSTAGRAM</li>
+        <li class="footer-item-social">FACEBOOK</li>
+        <li class="footer-item-social">X / TWITTER</li>
+      </div>
+      <div class="footer-row">
+        <h4>FAL' NTURE 2025© All rights deserved!</h4>
+        <h4><a href="#">Politica de Privacidade</a></h4>
+        <h4><a href="#">Termos de Serviços</a></h4>
+      </div>
+    </footer>
+
+    <!-- Script: dados + renderização corrigida e acessível -->
+    <script>
+      const shopItems = [
+        {img:"../images/PRODUCTS/PRODUCT1.png", brand:"SKIN1004", name:"Madagascar Centella Ampoule", price:"10,95 €", description:"Soro de centella — acabamento premium."},
+        {img:"../images/PRODUCTS/PRODUCT2.png", brand:"SKIN1004", name:"Madagascar Centella Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++", price:"14,75 €", description:"Sérum solar leve com proteção alta."},
+        {img:"../images/PRODUCTS/PRODUCT3.png", brand:"SKIN1004", name:"Madagascar Centella Light Cleansing Oil", price:"9,74 €", description:"Óleo de limpeza leve."},
+        {img:"../images/PRODUCTS/PRODUCT4.png", brand:"SKIN1004", name:"Madagascar Centella Travel Kit", price:"28,41 €", description:"Kit de viagem prático."},
+        {img:"../images/PRODUCTS/PRODUCT5.png", brand:"SKIN1004", name:"Madagascar Centella Tone Brightening Capsule Ampoule", price:"15,95 €", description:"Ampola iluminadora."},
+        {img:"../images/PRODUCTS/PRODUCT6.png", brand:"SKIN1004", name:"Madagascar Centella Ampoule Foam", price:"16,11 €", description:"Espuma de limpeza com centella."},
+        {img:"../images/PRODUCTS/PRODUCT7.png", brand:"SKIN1004", name:"Madagascar Centella Poremizing Quick Clay Stick Mask", price:"19,50 €", description:"Máscara de argila em stick."},
+        {img:"../images/PRODUCTS/PRODUCT8.png", brand:"SKIN1004", name:"Madagascar Centella Probio-Cica Intensive Ampoule", price:"27,95 €", description:"Ampola intensiva probiótica."},
+        {img:"../images/PRODUCTS/PRODUCT9.png", brand:"Beauty of Joseon", name:"Relief Sun : Rice + Probiotics SPF50+ PA++++", price:"17,90 €", description:"Protetor solar com arroz e probióticos."},
+        {img:"../images/PRODUCTS/PRODUCT10.png", brand:"Beauty of Joseon", name:"Revive Eye Serum : Ginseng + Retinal", price:"17,95 €", description:"Sérum de olhos com ginseng."},
+        {img:"../images/PRODUCTS/PRODUCT11.png", brand:"Beauty of Joseon", name:"Dynasty Cream", price:"23,95 €", description:"Creme nutritivo premium."},
+        {img:"../images/PRODUCTS/PRODUCT12.png", brand:"Beauty of Joseon", name:"Glow Serum Propolis+Niacinamide", price:"14,85 €", description:"Sérum com própolis e niacinamida."},
+        {img:"../images/PRODUCTS/PRODUCT13.png", brand:"Beauty of Joseon", name:"Relief Sun Aqua-fresh : Rice + B5 SPF50+ PA++++", price:"16,80 €", description:"Protetor solar leve Aqua-fresh."},
+        {img:"../images/PRODUCTS/PRODUCT14.png", brand:"Beauty of Joseon", name:"Green Plum Refreshing Cleanser", price:"12,95 €", description:"Gel de limpeza com ameixa verde."},
+        {img:"../images/PRODUCTS/PRODUCT15.png", brand:"Beauty of Joseon", name:"Glow Replenishing Rice Milk", price:"18,95 €", description:"Leite hidratante de arroz."},
+        {img:"../images/PRODUCTS/PRODUCT16.png", brand:"Beauty of Joseon", name:"Ginseng Essence Water", price:"17,95 €", description:"Essência hidratante de ginseng."}
+      ];
+
+      const containerShopItems = document.getElementById('shopItems-list');
+
+      function escapeHtml(str = '') {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      function createCardMarkup(item, idx) {
+        const imgSrc = item.img && item.img.trim() ? item.img : '../images/PRODUCTS/placeholder.png';
+        // If you don't have a placeholder image, the markup will show a simple div with placeholder text (handled by CSS)
+
+        return `
+          <article class="product-card" role="listitem" tabindex="0" aria-label="${escapeHtml(item.name)}" data-index="${idx}">
+            <figure class="product-media">
+              ${item.img && item.img.trim() ?
+                `<img src="${escapeHtml(imgSrc)}" alt="${escapeHtml(item.name)}" loading="lazy">` :
+                `<div class="placeholder" aria-hidden="true">Sem imagem</div>`
+              }
+
+              <button class="btn-wish" aria-label="Adicionar ${escapeHtml(item.name)} aos favoritos" data-action="wish" data-index="${idx}">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+              </button>
+            </figure>
+
+            <div class="product-body">
+              <div class="meta">
+                <span class="brand">${escapeHtml(item.brand)}</span>
+                <div class="rating" aria-hidden="true">★★★★☆</div>
+              </div>
+
+              <h3 class="title">${escapeHtml(item.name)}</h3>
+              <p class="excerpt">${escapeHtml(item.description)}</p>
+
+              <div class="product-footer">
+                <div class="price-area">
+                  <div class="price">${escapeHtml(item.price)}</div>
+                </div>
+
+                <div class="actions">
+                  <button class="btn btn-add" aria-label="Adicionar ao carrinho: ${escapeHtml(item.name)}" data-action="add" data-index="${idx}">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span class="visually-hidden">Adicionar ao carrinho</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      function renderShopItems() {
+        if (!containerShopItems) {
+          console.error("Erro: Elemento com ID 'shopItems-list' não encontrado.");
+          return;
+        }
+
+        const html = shopItems.map((item, idx) => createCardMarkup(item, idx)).join('');
+        containerShopItems.innerHTML = html;
+      }
+
+      // Basic event delegation for add-to-cart and wish actions
+      function handleGridClick(e) {
+        const btn = e.target.closest('[data-action]');
+        if (!btn) return;
+        const action = btn.dataset.action;
+        const index = Number(btn.dataset.index);
+        const item = shopItems[index];
+        if (!item) return;
+
+        if (action === 'add') {
+          // aqui podes integrar com o carrinho; por agora apenas log
+          console.log('Adicionar ao carrinho:', item.name);
+          btn.setAttribute('aria-pressed', 'true');
+          btn.disabled = true;
+          btn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i>';
+        }
+
+        if (action === 'wish') {
+          console.log('Favoritos:', item.name);
+          btn.setAttribute('aria-pressed', btn.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+          btn.querySelector('i')?.classList.toggle('fa-solid');
+          btn.querySelector('i')?.classList.toggle('fa-regular');
+        }
+      }
+
+      // Inicialização
+      document.addEventListener('DOMContentLoaded', () => {
+        renderShopItems();
+        containerShopItems.addEventListener('click', handleGridClick);
+
+        // keyboard: Enter on focused card -> toggle focus behaviour (e.g. show details)
+        containerShopItems.addEventListener('keydown', (e) => {
+          const card = e.target.closest('.product-card');
+          if (!card) return;
+          const index = Number(card.dataset.index);
+          if (e.key === 'Enter') {
+            // exemplo simples: abrir página de produto (neste template não existe), então mostramos nome
+            const item = shopItems[index];
+            console.log('Abrir produto (simulado):', item.name);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

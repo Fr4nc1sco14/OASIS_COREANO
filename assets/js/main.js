@@ -99,60 +99,6 @@ function escapeHtml(str) {
 renderMustPopullar();
 
 
-/* ============================================================================================== */
-/* ============================================================================================== */
-/* ============================================================================================== */
-/* ============================================================================================== */
-/* ============================================================================================== */
-
-
-const shopItems = [
-  {img:"", brand:"SKIN1004", name:"Madagascar Centella Ampoule", price:"10,95 €"},
-  {img:"", brand:"SKIN1004", name:"Madagascar Centella Hyalu-Cica Water-Fit Sun Serum SPF50+ PA++++", price:"14,75 €"},
-  {img:"", brand:"SKIN1004", name:"Madagascar Centella Light Cleansing Oil", price:"9,74 €"},
-  {img:"", brand:"SKIN1004", name:"Madagascar Centella Travel Kit", price:"28,41 €"},
-  {img:"", brand:"SKIN1004", name:"Madagascar Centella Tone Brightening Capsule Ampoule", price:"15,95 €"},
-  {img:"", brand:"SKIN1004", name:"Madagascar Centella Ampoule Foam", price:"16,11 €"},
-  {img:"", brand:"SKIN1004", name:"Madagascar Centella Poremizing Quick Clay Stick Mask", price:"19,50 €"},
-  {img:"", brand:"SKIN1004", name:"Madagascar Centella Probio-Cica Intensive Ampoule", price:"27,95 €"}
-]
-
-const containerShopItems = document.getElementById('shopItems-list')
-
-function renderShopItems() {
-  if (!containerShopItems) {
-    console.error("Erro: Elemento com ID 'shopItems-list' não encontrado.");
-    return;
-}
-
-  const html = shopItems.map((item, idx) => {
-    return `
-      <article class="card" role="listitem" tabindex="0" aria-label="${escapeHtml(item.brand)}" data-index="${idx}">
-        <img src="${item.img}" alt="${escapeHtml(item.brand)}">
-        <div class="brand">${escapeHtml(item.brand)}</div>
-      </article>
-    `;
-  }).join('');
-
-  containerMustPopullar.innerHTML = html;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======= Controles prev / next ======= */
 const btnPrev = document.getElementById('scroll-prev');
 const btnNext = document.getElementById('scroll-next');
