@@ -59,7 +59,7 @@ body{
 
 /* Logo */
 .navbar-items-logo a { display: inline-flex; align-items: center; text-decoration: none; }
-.navbar-items-logo img { height: 44px; width: auto; display:block; }
+.navbar-items-logo img { height: 64px; width: auto; display:block; }
 
 /* Menu (lista de links) */
 .navbar-items-li {
